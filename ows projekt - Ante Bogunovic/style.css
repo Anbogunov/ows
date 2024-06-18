@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+header.izbornik_box {
+    background-color: #333399;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+ul.izbornik {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li.izbornik {
+    margin-right: 20px;
+}
+
+li.izbornik a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+li.izbornik a:hover, li.izbornik a.active {
+    background-color: #000066;
+}
+
+img.ilustracija {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+main.tekst {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer.footer {
+    background-color: #333399;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-radius: 10px;
+}
+
+footer.footer div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+div.slike {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+div.slike img {
+    max-width: 45%; 
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s; 
+}
+
+div.slike img:hover {
+    transform: scale(1.05); 
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+div.slike2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.slike2 a {
+    text-decoration: none; 
+    flex: 1 0 200px; 
+    margin: 10px; 
+}
+
+div.slike2 img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+div.slike2 img:hover {
+    transform: scale(1.05); 
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #333399;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+form input[type="submit"]:hover {
+    background-color: #000066;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    header.izbornik_box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    ul.izbornik {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul.izbornik.show {
+        display: flex;
+    }
+
+    li.izbornik {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    li.izbornik a {
+        padding: 10px 20px;
+    }
+
+    img.ilustracija {
+        height: 50px;
+    }
+
+    div.slike {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.slike img {
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+}
+    
